@@ -1,0 +1,9 @@
+*.DS_STORE
+*.pyc
+.python-version
+.pytest_cache/
+.idea/*
+passenger_wsgi.py
+settings.json
+db.sqlite3
+public/project/media/

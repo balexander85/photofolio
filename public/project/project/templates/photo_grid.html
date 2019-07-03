@@ -1,0 +1,21 @@
+<!-- Photo Grid -->
+{% if photos %}
+    <div class="w3-row" id="myGrid">
+        <div class="w3-row" style="margin-bottom:28px">
+            {% for photo in photos %}
+                <div class="w3-col s4 w3-padding-small">
+                    <img class="w3-card-4" src="{{ photo.get_display_url }}" style="width:100%">
+                </div>
+                <!-- if last column in row -->
+                {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                    </div><div class="w3-row" style="margin-bottom:28px">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% else %}
+    <div class="w3-row" id="myGrid" style="margin-bottom:28px">
+        <p>NO PHOTOS</p>
+    </div>
+{% endif %}
+

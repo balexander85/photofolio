@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>W3.CSS Template Photofolio | {% block head_title %}title{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Robots" content="index, follow">
+        {% load static %}
+        <link rel="shortcut icon" href="{% static '/favicon.ico' %}" type="image/x-icon">
+        <link rel="icon" href="{% static '/favicon.ico' %}" type="image/x-icon">
+        <!--Download latest update to W3.CSS from this link: https://www.w3schools.com/w3css/4/w3.css-->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/w3.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            // Toggle grid padding
+            function myFunction() {
+                var x = document.getElementById("myGrid");
+                if (x.className === "w3-row") {
+                    x.className = "w3-row-padding";
+                } else {
+                    x.className = x.className.replace("w3-row-padding", "w3-row");
+                }
+            }
+
+            //function myFunction() {
+            //    var grid = document.getElementById("myGrid");
+            //    var rows = grid.getElementsByClassName("w3-row");
+            //    for (let row of rows){
+            //        if (row.className === "w3-row") {
+            //            row.className = "w3-row-padding";
+            //        } else {
+            //            row.className = row.className.replace("w3-row-padding", "w3-row");
+            //        }
+            //    }
+            //}
+
+            // Open and close sidebar
+            function w3_open() {
+                document.getElementById("mySidebar").style.width = "100%";
+                document.getElementById("mySidebar").style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+        </script>
+    </head>
+    <body>
+    {% block content %}
+
+    {% endblock %}
+    {% include "footer.html" %}
+    </body>
+</html>

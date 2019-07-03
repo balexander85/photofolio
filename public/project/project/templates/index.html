@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block head_title %}Home{% endblock %}
+{% block content %}
+    {% include "sidebar.html" %}
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-content" style="max-width:1500px">
+        {% include "header.html" %}
+        {% include "photo_grid.html" %}
+    <!-- !PAGE CONTENT END! -->
+    </div>
+{% endblock %}
